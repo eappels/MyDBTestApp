@@ -32,10 +32,10 @@
             this.lbl_LastName = new System.Windows.Forms.Label();
             this.txt_FirstName = new System.Windows.Forms.TextBox();
             this.txt_LastName = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btn_AddPerson = new System.Windows.Forms.Button();
+            this.btn_Refresh = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.lst_Output = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lbl_FirstName
@@ -74,50 +74,53 @@
             this.txt_LastName.Size = new System.Drawing.Size(207, 31);
             this.txt_LastName.TabIndex = 3;
             // 
-            // button1
+            // btn_AddPerson
             // 
-            this.button1.Location = new System.Drawing.Point(18, 136);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 36);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_AddPerson.Location = new System.Drawing.Point(18, 136);
+            this.btn_AddPerson.Name = "btn_AddPerson";
+            this.btn_AddPerson.Size = new System.Drawing.Size(206, 36);
+            this.btn_AddPerson.TabIndex = 4;
+            this.btn_AddPerson.Text = "Add Person";
+            this.btn_AddPerson.UseVisualStyleBackColor = true;
+            this.btn_AddPerson.Click += new System.EventHandler(this.btn_AddPerson_Click);
             // 
-            // button2
+            // btn_Refresh
             // 
-            this.button2.Location = new System.Drawing.Point(18, 175);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(206, 36);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Refresh.Location = new System.Drawing.Point(18, 175);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(206, 36);
+            this.btn_Refresh.TabIndex = 5;
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
-            // button3
+            // btn_Delete
             // 
-            this.button3.Location = new System.Drawing.Point(18, 215);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(206, 36);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Delete.Location = new System.Drawing.Point(18, 215);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(206, 36);
+            this.btn_Delete.TabIndex = 6;
+            this.btn_Delete.Text = "Delete";
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
-            // listBox1
+            // lst_Output
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(230, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(189, 238);
-            this.listBox1.TabIndex = 7;
+            this.lst_Output.FormattingEnabled = true;
+            this.lst_Output.Location = new System.Drawing.Point(230, 12);
+            this.lst_Output.Name = "lst_Output";
+            this.lst_Output.Size = new System.Drawing.Size(189, 238);
+            this.lst_Output.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(446, 267);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lst_Output);
+            this.Controls.Add(this.btn_Delete);
+            this.Controls.Add(this.btn_Refresh);
+            this.Controls.Add(this.btn_AddPerson);
             this.Controls.Add(this.txt_LastName);
             this.Controls.Add(this.txt_FirstName);
             this.Controls.Add(this.lbl_LastName);
@@ -135,10 +138,10 @@
         private System.Windows.Forms.Label lbl_LastName;
         private System.Windows.Forms.TextBox txt_FirstName;
         private System.Windows.Forms.TextBox txt_LastName;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btn_AddPerson;
+        private System.Windows.Forms.Button btn_Refresh;
+        private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.ListBox lst_Output;
     }
 }
 
