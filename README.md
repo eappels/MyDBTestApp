@@ -1,2 +1,3 @@
 # MyDBTestApp
-Test app
+Visual C#
+SQLite
