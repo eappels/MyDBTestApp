@@ -98,7 +98,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(206, 36);
             this.button3.TabIndex = 6;
-            this.button3.Text = "button3";
+            this.button3.Text = "button100000";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // listBox1
