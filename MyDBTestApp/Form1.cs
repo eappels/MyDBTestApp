@@ -4,12 +4,12 @@ using System.Windows.Forms;
 
 namespace MyDBTestApp
 {
-    public partial class Form1 : Form
+    public partial class frm_Main : Form
     {
 
         private List<PersonModel> people = new List<PersonModel>();
 
-        public Form1()
+        public frm_Main()
         {
             InitializeComponent();
             LoadPeopleList();

@@ -1,6 +1,6 @@
 ﻿namespace MyDBTestApp
 {
-    partial class Form1
+    partial class frm_Main
     {
         /// <summary>
         /// Required designer variable.
@@ -41,42 +41,43 @@
             // lbl_FirstName
             // 
             this.lbl_FirstName.AutoSize = true;
-            this.lbl_FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_FirstName.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_FirstName.Location = new System.Drawing.Point(55, 9);
             this.lbl_FirstName.Name = "lbl_FirstName";
-            this.lbl_FirstName.Size = new System.Drawing.Size(120, 25);
+            this.lbl_FirstName.Size = new System.Drawing.Size(115, 23);
             this.lbl_FirstName.TabIndex = 0;
             this.lbl_FirstName.Text = "First name:";
             // 
             // lbl_LastName
             // 
             this.lbl_LastName.AutoSize = true;
-            this.lbl_LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_LastName.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_LastName.Location = new System.Drawing.Point(55, 71);
             this.lbl_LastName.Name = "lbl_LastName";
-            this.lbl_LastName.Size = new System.Drawing.Size(119, 25);
+            this.lbl_LastName.Size = new System.Drawing.Size(116, 23);
             this.lbl_LastName.TabIndex = 1;
             this.lbl_LastName.Text = "Last name:";
             // 
             // txt_FirstName
             // 
-            this.txt_FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_FirstName.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_FirstName.Location = new System.Drawing.Point(17, 37);
             this.txt_FirstName.Name = "txt_FirstName";
-            this.txt_FirstName.Size = new System.Drawing.Size(207, 31);
+            this.txt_FirstName.Size = new System.Drawing.Size(207, 33);
             this.txt_FirstName.TabIndex = 2;
             // 
             // txt_LastName
             // 
-            this.txt_LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_LastName.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_LastName.Location = new System.Drawing.Point(17, 99);
             this.txt_LastName.Name = "txt_LastName";
-            this.txt_LastName.Size = new System.Drawing.Size(207, 31);
+            this.txt_LastName.Size = new System.Drawing.Size(207, 33);
             this.txt_LastName.TabIndex = 3;
             // 
             // btn_AddPerson
             // 
-            this.btn_AddPerson.Location = new System.Drawing.Point(18, 136);
+            this.btn_AddPerson.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddPerson.Location = new System.Drawing.Point(18, 139);
             this.btn_AddPerson.Name = "btn_AddPerson";
             this.btn_AddPerson.Size = new System.Drawing.Size(206, 36);
             this.btn_AddPerson.TabIndex = 4;
@@ -86,7 +87,8 @@
             // 
             // btn_Refresh
             // 
-            this.btn_Refresh.Location = new System.Drawing.Point(18, 175);
+            this.btn_Refresh.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.Location = new System.Drawing.Point(18, 180);
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.Size = new System.Drawing.Size(206, 36);
             this.btn_Refresh.TabIndex = 5;
@@ -96,7 +98,8 @@
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(18, 215);
+            this.btn_Delete.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Delete.Location = new System.Drawing.Point(18, 221);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(206, 36);
             this.btn_Delete.TabIndex = 6;
@@ -106,16 +109,19 @@
             // 
             // lst_Output
             // 
+            this.lst_Output.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lst_Output.FormattingEnabled = true;
+            this.lst_Output.ItemHeight = 16;
             this.lst_Output.Location = new System.Drawing.Point(230, 12);
             this.lst_Output.Name = "lst_Output";
-            this.lst_Output.Size = new System.Drawing.Size(189, 238);
+            this.lst_Output.Size = new System.Drawing.Size(189, 244);
             this.lst_Output.TabIndex = 7;
             // 
-            // Form1
+            // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(446, 267);
             this.Controls.Add(this.lst_Output);
             this.Controls.Add(this.btn_Delete);
@@ -125,8 +131,8 @@
             this.Controls.Add(this.txt_FirstName);
             this.Controls.Add(this.lbl_LastName);
             this.Controls.Add(this.lbl_FirstName);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frm_Main";
+            this.Text = "Persons Sqlite database";
             this.ResumeLayout(false);
             this.PerformLayout();
 
