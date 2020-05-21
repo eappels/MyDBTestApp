@@ -6,7 +6,7 @@ namespace MyDBTestApp.Tests
     {
 
         [Fact]
-        public void Encrypt_ShouldReturnAnEcryptedString()
+        public void Encrypt_ShouldReturnSameDataAfterEncryptionAndDecrytion()
         {
             string tmp = StringEncrypter.Encrypt("EddyAppels", "aaa");
             string expected = StringEncrypter.Decrypt(tmp, "aaa");
