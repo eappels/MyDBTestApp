@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
@@ -76,6 +77,29 @@ namespace MyDBTestApp
                     }
                 }
             }
+        }
+
+        public static PersonModel Encrypt(PersonModel person, string passPhrase = "abc123")
+        {
+            PersonModel encryptedPersonModel = new PersonModel();
+            encryptedPersonModel.Id = person.Id;
+            encryptedPersonModel.Firstname = Encrypt(person.Firstname);
+            encryptedPersonModel.LastName = Encrypt(person.LastName);
+            return encryptedPersonModel;
+        }
+
+        public static List<PersonModel> Decrypt(List<PersonModel> persons, string passPhrase = "abc123")
+        {
+            List<PersonModel> decryptedList = new List<PersonModel>();
+            foreach (PersonModel encryptedPersonModel in persons.ToList())
+            {
+                PersonModel decryptedPersonModel = new PersonModel();
+                decryptedPersonModel.Id = encryptedPersonModel.Id;
+                decryptedPersonModel.Firstname = Decrypt(encryptedPersonModel.Firstname);
+                decryptedPersonModel.LastName = Decrypt(encryptedPersonModel.LastName);
+                decryptedList.Add(decryptedPersonModel);
+            }
+            return decryptedList;
         }
 
         private static byte[] Generate256BitsOfRandomEntropy()
