@@ -19,6 +19,19 @@ namespace MyDBTestApp
             }
         }
 
+        public static PersonModel LoadPerson(int id)
+        {
+            using (IDbConnection conn = new SQLiteConnection(LoadConnectionString()))
+            {
+                PersonModel encryptedPerson = (PersonModel)conn.Query<PersonModel>("Select Firstname, LastName from Persons where id = " + id);
+                PersonModel decryptedPerson = new PersonModel();
+                decryptedPerson.Id = encryptedPerson.Id;
+                decryptedPerson.Firstname = StringEncrypter.Decrypt(encryptedPerson.Firstname);
+                decryptedPerson.LastName = StringEncrypter.Decrypt(encryptedPerson.LastName);
+                return decryptedPerson;
+            }
+        }
+
         public static void SavePerson(PersonModel person)
         {
             using (IDbConnection conn = new SQLiteConnection(LoadConnectionString()))

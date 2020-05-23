@@ -33,9 +33,9 @@
             this.txt_FirstName = new System.Windows.Forms.TextBox();
             this.txt_LastName = new System.Windows.Forms.TextBox();
             this.btn_AddPerson = new System.Windows.Forms.Button();
-            this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.lst_Output = new System.Windows.Forms.ListBox();
+            this.btn_Edit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_FirstName
@@ -77,29 +77,18 @@
             // btn_AddPerson
             // 
             this.btn_AddPerson.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddPerson.Location = new System.Drawing.Point(18, 139);
+            this.btn_AddPerson.Location = new System.Drawing.Point(17, 139);
             this.btn_AddPerson.Name = "btn_AddPerson";
-            this.btn_AddPerson.Size = new System.Drawing.Size(206, 36);
+            this.btn_AddPerson.Size = new System.Drawing.Size(206, 34);
             this.btn_AddPerson.TabIndex = 4;
             this.btn_AddPerson.Text = "Add Person";
             this.btn_AddPerson.UseVisualStyleBackColor = true;
             this.btn_AddPerson.Click += new System.EventHandler(this.btn_AddPerson_Click);
             // 
-            // btn_Refresh
-            // 
-            this.btn_Refresh.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Refresh.Location = new System.Drawing.Point(18, 180);
-            this.btn_Refresh.Name = "btn_Refresh";
-            this.btn_Refresh.Size = new System.Drawing.Size(206, 36);
-            this.btn_Refresh.TabIndex = 5;
-            this.btn_Refresh.Text = "Refresh";
-            this.btn_Refresh.UseVisualStyleBackColor = true;
-            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
-            // 
             // btn_Delete
             // 
             this.btn_Delete.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Delete.Location = new System.Drawing.Point(18, 221);
+            this.btn_Delete.Location = new System.Drawing.Point(18, 220);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(206, 36);
             this.btn_Delete.TabIndex = 6;
@@ -117,15 +106,26 @@
             this.lst_Output.Size = new System.Drawing.Size(189, 244);
             this.lst_Output.TabIndex = 7;
             // 
+            // btn_Edit
+            // 
+            this.btn_Edit.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Edit.Location = new System.Drawing.Point(18, 179);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.Size = new System.Drawing.Size(206, 34);
+            this.btn_Edit.TabIndex = 8;
+            this.btn_Edit.Text = "Edit Person";
+            this.btn_Edit.UseVisualStyleBackColor = true;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(440, 267);
+            this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.lst_Output);
             this.Controls.Add(this.btn_Delete);
-            this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.btn_AddPerson);
             this.Controls.Add(this.txt_LastName);
             this.Controls.Add(this.txt_FirstName);
@@ -145,9 +145,9 @@
         private System.Windows.Forms.TextBox txt_FirstName;
         private System.Windows.Forms.TextBox txt_LastName;
         private System.Windows.Forms.Button btn_AddPerson;
-        private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.ListBox lst_Output;
+        private System.Windows.Forms.Button btn_Edit;
     }
 }
 

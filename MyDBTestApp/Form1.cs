@@ -26,21 +26,29 @@ namespace MyDBTestApp
             lst_Output.DataSource = null;
             lst_Output.DataSource = people;
             lst_Output.DisplayMember = "Fullname";
+            lst_Output.SelectedIndex = -1;
         }
 
         private void btn_AddPerson_Click(object sender, EventArgs e)
         {
-            PersonModel personmodel = new PersonModel();
-            personmodel.Firstname = txt_FirstName.Text;
-            personmodel.LastName = txt_LastName.Text;
-            SqlLiteDataAccess.SavePerson(personmodel);
-            txt_FirstName.Text = "";
-            txt_LastName.Text = "";
+            if (txt_FirstName.Text.Length > 0 && txt_LastName.Text.Length > 0)
+            {
+                PersonModel personmodel = new PersonModel();
+                personmodel.Firstname = txt_FirstName.Text;
+                personmodel.LastName = txt_LastName.Text;
+                SqlLiteDataAccess.SavePerson(personmodel);
+                txt_FirstName.Text = "";
+                txt_LastName.Text = "";
+                LoadPeopleList();
+            }
         }
 
-        private void btn_Refresh_Click(object sender, EventArgs e)
+        private void btn_Edit_Click(object sender, EventArgs e)
         {
-            LoadPeopleList();
+            if (lst_Output.SelectedItem == null) return;
+            PersonModel person = SqlLiteDataAccess.LoadPerson(lst_Output.SelectedIndex);
+            txt_FirstName.Text = person.Firstname;
+            txt_LastName.Text = person.LastName;
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -51,6 +59,7 @@ namespace MyDBTestApp
                 {
                     SqlLiteDataAccess.DeletePerson(model.Id);
                 }
+                LoadPeopleList();
             }
         }
     }
